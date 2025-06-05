@@ -23,17 +23,11 @@ data = [
 ]
 
 # Bubble Sort Class
-class BubbleSort:
-    """
-    Using Bubble Sort Algorithm, Sort the data by Age in ascending order
-    """
-    @staticmethod
-    def sort(items, type = "age"):
-        if type == "age":
-            type_index = 2
-        else:
-            type_index = 0
 
+class BubbleSort:
+    @staticmethod
+    def sort(items, type="age"):
+        type_index = 2 if type == "age" else 0
         for i in range(len(items)):
             for j in range(len(items) - 1):
                 if items[j][type_index] > items[j + 1][type_index]:
